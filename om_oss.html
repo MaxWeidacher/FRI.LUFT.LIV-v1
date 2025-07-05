@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sv">
 <head>
@@ -15,6 +14,20 @@
     .gallery { display: flex; flex-wrap: wrap; gap: 1em; margin-top: 2em; justify-content: center; }
     .gallery img { width: 200px; border-radius: 6px; object-fit: cover; height: 150px; }
     footer { background: #333; color: white; text-align: center; padding: 1.5em; margin-top: 3em; }
+
+    .slider {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
   </style>
 </head>
 <body>
@@ -45,15 +58,6 @@
   <a href="#guides" style="margin: 1em; background: #536c28; color: white; padding: 1em 2em; border-radius: 5px; text-decoration: none;">Våra guider</a>
 </div>
 
-
-
-
-
-
-
-
-
-
 <section>
   <h2 id="company">Om företaget</h2>
   <p>FRI.LUFT.LIV erbjuder guidade turer och kurser med fokus på friluftsteknik, trygghet och naturpedagogik i svensk vildmark.</p>
@@ -77,12 +81,8 @@
     </div>
   </div>
 
-  
   <p>Vi strävar efter att skapa naturupplevelser som är tillgängliga, trygga och hållbara. Våra värderingar vilar på respekt för naturen, gemenskap och lärande genom upplevelse.</p>
-
-  
 </section>
-
 
 <footer id="footer" style="background:#333; color:white; text-align:center; padding:2em;">
   <p>Email: friluftlivoutdoor@gmail.com</p>
@@ -94,7 +94,6 @@
     </a>
   </p>
 </footer>
-
 
 </body>
 </html>
