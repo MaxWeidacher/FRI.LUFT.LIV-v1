@@ -27,12 +27,10 @@
     <div style="font-size: 0.9em; color: #ccc;">outdoor & guiding</div>
   </div>
   <nav style="display: flex; align-items: center; gap: 0.8em;">
-    <a href="index.html" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Hem</a>
-    <a href="index.html#turer" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Turer och kurser</a>
-    <a href="index.html#footer" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Kontakt</a>
-    <a href="om-oss.html" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Om oss</a>
-    <span style="color: white; margin-left: 0.5em;">SV</span>
-    <span style="color: white; margin-left: 0.5em;">ENG</span>
+    <a href="index.html" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Hem/Home</a>
+    <a href="index.html#turer" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Turer och kurser/tours & Courses</a>
+    <a href="index.html#footer" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Kontakt/Contact</a>
+    <a href="om-oss.html" style="color: white; background: #536c28; padding: 0.5em 1em; border-radius: 4px; text-decoration: none;">Om oss/About Us</a>
     <a href="https://www.instagram.com/fri.luft.liv/" target="_blank" style="margin-left: 0.5em;">
       <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" style="width:24px; vertical-align:middle; background: none;">
     </a>
@@ -55,38 +53,42 @@
   <h2>Program</h2>
   <p>[Plats för detaljerat dagsprogram]</p>
 
-  <h2>Vad ingår i kursen?</h2>
+  <h2>Vad ingår i kursen?/What is included in the course?</h2>
   <p>[Plats för information om utrustning, mat, handledning m.m.]</p>
 
-  <h2>Vart?</h2>
+  <h2>Vart?/Where?</h2>
   <p>[Plats för platsbeskrivning, karta eller riktlinjer]</p>
 
-  <h2>Pris</h2>
+  <h2>Pris/Price</h2>
   <p>[Plats för prisinformation, inkl. ev. bokningsvillkor]</p>
 
-  <div style="display: flex; gap: 2em; justify-content: center; flex-wrap: wrap;">
-    <form style="flex: 1 1 300px;">
-      <h3>Boka plats</h3>
-      <label for="datum">Välj datum:</label>
-      <select id="datum">
-        <option>2025-07-08</option>
-        <option>2025-08-12</option>
-      </select>
-      <input type="text" placeholder="Namn" required>
-      <input type="email" placeholder="E-post" required>
-      <input type="tel" placeholder="Telefonnummer">
-      <input type="number" placeholder="Antal personer">
-      <select>
-        <option>Betala nu</option>
-        <option>Betala senare</option>
-      </select>
-      <button type="submit">Skicka bokning</button>
-    </form>
-    <iframe style="flex: 1 1 300px; border: none; height: 500px;" 
-      src="https://calendar.google.com/calendar/embed?src=sv.swedish%23holiday%40group.v.calendar.google.com&ctz=Europe%2FStockholm">
-    </iframe>
-  </div>
-</div>
+ <form action="https://formspree.io/f/mzzglrgq" method="POST"
+  onsubmit="setTimeout(() => { window.location.href='https://buy.stripe.com/test_aFaaEQ6YC3Qfe5DfJha3u00"
+  style="flex: 1 1 300px; background: white; padding: 2em; border-radius: 8px; max-width: 500px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+
+  <h3>Boka plats – Bushcraftkurs</h3>
+
+  <label for="datum">Välj datum:</label>
+  <select id="datum" name="datum" required>
+    <option value="">Välj datum</option>
+    <option value="2025-07-08">8 juli 2025</option>
+    <option value="2025-08-12">12 augusti 2025</option>
+  </select>
+
+  <input type="text" name="namn" placeholder="Namn" required>
+  <input type="email" name="email" placeholder="E-post" required>
+  <input type="tel" name="telefon" placeholder="Telefonnummer">
+  <input type="number" name="antal" placeholder="Antal personer" required min="1">
+  <select name="betalning" required>
+    <option value="">Välj betalningssätt</option>
+    <option value="Betala nu">Betala nu</option>
+    <option value="Betala senare">Betala senare</option>
+  </select>
+
+  <input type="text" name="_gotcha" style="display:none">
+  <button type="submit">Skicka bokning & gå till betalning</button>
+</form>
+
 
 <footer>
   <p>Email: friluftlivoutdoor@gmail.com | Telefon: +46 733 599 678</p>
